@@ -1,0 +1,8 @@
+__pycache__/
+*.pyc
+test_*.jsonl
+test_*.csv
+.env
+
+# do not commit the organizer-provided data file (465MB)
+candidates.jsonl

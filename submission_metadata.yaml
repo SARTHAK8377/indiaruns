@@ -1,0 +1,56 @@
+# Redrob Hackathon — Submission Metadata
+# Fill in the TODO fields before submitting.
+
+team_name: "TODO-your-team-name"
+
+primary_contact:
+  name: "Sarthak"            # TODO full name
+  email: "TODO@example.com"
+  phone: "+91-TODO"
+
+team_members:
+  - name: "Sarthak"
+    email: "TODO@example.com"
+    role: "Team Lead / ML Engineer"
+
+# Code and reproducibility
+github_repo: "https://github.com/TODO/redrob-ranker"
+sandbox_link: "https://huggingface.co/spaces/TODO/redrob-ranker"   # TODO (see below)
+reproduce_command: "python rank.py --candidates ./candidates.jsonl --out ./submission.csv"
+
+# Compute environment
+compute:
+  platform: "Kaggle Notebook (CPU) / local"
+  cpu_cores: 4
+  ram_gb: 16
+  python_version: "3.11"
+  os: "Ubuntu 22.04"
+  uses_gpu_for_inference: false          # ranking step is CPU-only
+  has_network_during_ranking: false      # ranking step makes no API calls
+  pre_computation_required: true         # embeddings generated offline
+  pre_computation_time_minutes: 15
+
+# AI tools declaration (transparency only)
+ai_tools_used:
+  - "Claude"
+ai_usage_summary: |
+  Used Claude for architecture discussion, code review, and help structuring the
+  scoring pipeline. No candidate data was sent to any hosted LLM during ranking;
+  the ranking step is fully local, CPU-only, and offline.
+
+methodology_summary: |
+  Hybrid ranker over pre-computed embeddings. A weighted base score (semantic
+  similarity, trust-weighted skill match, title relevance, experience-band fit,
+  location, education) is combined with a multiplicative behavioral-availability
+  modifier and explicit negative-signal penalties (consulting-only careers,
+  job-hopping). Impossible profiles are caught by consistency checks
+  (expert-skill-with-zero-duration, experience vs. career-span gap) and forced
+  out of the top 100. The title component is the primary defense against
+  keyword-stuffer honeypots. Ranking runs in well under 5 minutes on CPU.
+
+declarations:
+  read_submission_spec: true
+  code_is_original_work: true
+  no_collusion: true
+  honeypot_check_done: true
+  reproduction_tested: true

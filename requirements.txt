@@ -1,0 +1,7 @@
+# ranking step (rank.py) — CPU only, no network
+numpy
+pandas
+
+# pre-computation only (precompute_embeddings.py)
+sentence-transformers
+torch
