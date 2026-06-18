@@ -1,21 +1,21 @@
 # Redrob Hackathon — Submission Metadata
-# Fill in the TODO fields before submitting.
 
-team_name: "TODO-your-team-name"
+team_name: "Sequenc"
 
 primary_contact:
-  name: "Sarthak"            # TODO full name
-  email: "TODO@example.com"
-  phone: "+91-TODO"
+  name: "Ishaan Maheshwari"            
+  email: "ishaan.maheshwari.07@gmail.com"
+  phone: "+91 8750316047"
+  role: "Team Lead"
 
 team_members:
-  - name: "Sarthak"
-    email: "TODO@example.com"
-    role: "Team Lead / ML Engineer"
+    name: "Sarthak"
+    email: "sarthaksinghal2006@gmail.com"
+    role: "ML Engineer"
 
 # Code and reproducibility
-github_repo: "https://github.com/TODO/redrob-ranker"
-sandbox_link: "https://huggingface.co/spaces/TODO/redrob-ranker"   # TODO (see below)
+github_repo: "https://github.com/SARTHAK8377/indiaruns.git"
+sandbox_link: "https://colab.research.google.com/drive/1ZgO1C9RjJmlqxflBfiZnSMnD1ZNpGY6K?usp=sharing"   
 reproduce_command: "python rank.py --candidates ./candidates.jsonl --out ./submission.csv"
 
 # Compute environment
